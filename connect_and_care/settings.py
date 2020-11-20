@@ -115,7 +115,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'connect_care',
         'USER': 'postgres',
-        'PASSWORD': get_secret('DB_PASSWORD'),
+        'PASSWORD': 'P@44w0rd12!',
         'HOST': 'localhost'
     }
 }
