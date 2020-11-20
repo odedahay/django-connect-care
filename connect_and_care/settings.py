@@ -172,13 +172,6 @@ MEDIA_URL = '/media/'
 # SENDGRID_API_KEY = get_secret('SENDGRID_SECRET_KEY')
 # SENDGRID_SANDBOX_MODE_IN_DEBUG=False
 
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
-EMAIL_HOST_PASSWORD = get_secret('SENDGRID_SECRET_KEY')
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-
-
 try:
     from .local_settings import *
 except ImportError:
