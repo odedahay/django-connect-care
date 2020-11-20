@@ -66,6 +66,29 @@ pre {
   width: 320px
 }
 
+@media (max-width: 375px) {
+  .site-header__logo img{
+    margin-top: 20px;
+    width: 220px
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .site-header__logo img{
+    margin-top: 20px;
+    width: 220px
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .site-header__logo img{
+    margin-top: 20px;
+    width: 220px
+  }
+}
+
 
 .site-header .flex {
   justify-content: space-between;
@@ -402,7 +425,7 @@ pre {
   background-color: #f5f5f5;
   transition: transform 0.2s ease-in;
   min-height: 460px;
-  background: url(/static/images/pattern-2.png) no-repeat;
+  background: url(/static/pattern-2.png) no-repeat;
   background-size: contain;
   background-position: center center;
   top: 0;
@@ -496,7 +519,7 @@ a.home-faq-btn-red:hover{
 
 .card.with-pattern::before {
   content: '';
-  background: url(/static/images/pattern-2.png) no-repeat;
+  background: url(/static/pattern-2.png) no-repeat;
   background-size: cover;
   background-position: center center;
   position: absolute;
@@ -760,7 +783,7 @@ a.home-faq-btn-red:hover{
 }
 .programs-main__list li{
   margin-left: 1rem;
-  list-style-image:url(/static/images/icons/check-solid.svg);
+  list-style-image:url(/static/icons/check-solid.svg);
 }
 
 .programs-main .grid{
@@ -813,6 +836,21 @@ a.home-faq-btn-red:hover{
   border-bottom: 10px solid var(--primary-color);
 }
 
+@media (max-width: 375px) {
+  .banner-block{
+    background-size: cover!important;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .banner-block{
+    background-size: cover!important;
+  }
+  
+}
+
+
 .banner-block__bg{
   height: 200px;
   border-bottom: 10px solid var(--primary-color);
@@ -828,6 +866,8 @@ a.home-faq-btn-red:hover{
   align-items: center;
   height: 100%;
 }
+.sticky-sidebar{
+/* position: relative; */}
 
 .sticky-card-fixed{
   position: fixed;
@@ -921,6 +961,21 @@ a.home-faq-btn-red:hover{
   margin: 0 5px;
 }
 
+/* @media (max-width: 375px) {
+  .footer_item.social a {
+    margin: 0 5px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .site-header__logo img{
+    margin-top: 20px;
+    width: 220px
+  }
+} */
+
+
 .address p{
   margin: 0;
 }
@@ -946,7 +1001,7 @@ a.home-faq-btn-red:hover{
   .special-accordion{
       padding: 5px 20px 0 20px;
   }
- 
+
   @media  screen and (min-width: 767px){
   .special-accordion{
           padding: 5px 0 0 0;
@@ -961,7 +1016,7 @@ a.home-faq-btn-red:hover{
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-   
+
     border: none;
     text-align: left;
     outline: none;
@@ -971,6 +1026,18 @@ a.home-faq-btn-red:hover{
     margin-bottom: 10px;
     border-radius: 6px;
 }
+@media (max-width: 320px) {
+  .accordion-button{
+    width: 65%;
+  }
+}
+@media (max-width: 375px) {
+  .accordion-button{
+    width: 75%;
+  }
+}
+
+
 
 @media (min-width:767px){
   .accordion-button{
@@ -986,6 +1053,20 @@ a.home-faq-btn-red:hover{
     color: #333;
 
 }
+@media (max-width: 375px) {
+  .accordion-button h2{
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion-button h2{
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}
+
 
 .active-display h2{
     color: var(--primary-color);
@@ -1015,6 +1096,14 @@ a.home-faq-btn-red:hover{
       overflow: hidden;
       transition: max-height 0.2s ease-out;
   }
+  
+  @media (max-width: 768px) {
+    .site-header__logo img{
+      margin-top: 20px;
+      width: 210px
+    }
+  }
+  
   .accordion-container{
       padding:20px 28px 20px 18px;
   }
@@ -1070,37 +1159,28 @@ a.home-faq-btn-red:hover{
   justify-self: flex-end;
 }
 
+@media (max-width: 375px) {
+  .contact-main__wrapper{
+    width: 100%;
+    padding: 0px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .contact-main__wrapper{
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+
+
 .contact-main__form .form-control {
   margin: 0px 0 15px 0;
 }
 
-.contact-main__form input[type='file']{
-  font-size: .95rem;
-  font-weight: 300;
-  margin-top: 10px;
-  cursor: pointer;
-  /* background: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: 5px; */
-}
-
-
-.label {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.5rem;
-  font-family: sans-serif;
-  border-radius: 0.3rem;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-
-#file-chosen{
-  margin-left: 0.3rem;
-  font-family: sans-serif;
-}
-
+.contact-main__form input[type='subje'],
 .contact-main__form input[type='tel'],
 .contact-main__form input[type='text'],
 .contact-main__form input[type='email']{
@@ -1163,23 +1243,38 @@ textarea {
   color: #fff;
 }
 
-/* ==================== Tablets IPAD Pro ==================== */
-
-@media  screen and (max-width:1024px){
-
-  .program-offered .grid-4{
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 375px) {
+  .contact-main__address{
+    text-align: center;
   }
-
-  .home-faq .grid{
-    grid-template-columns: 1fr;
+  .contact-main__address h3{
+    font-size: 1rem;
   }
-
+   
 }
 
+@media (max-width: 768px) {
+  .contact-main__address{
+    text-align: center;
+  }
+  .contact-main__address h3{
+    font-size: 1rem;
+  }
+}
+
+
+  @media  screen and (max-width:1024px){
+    .program-offered .grid-4{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-faq .grid{
+      grid-template-columns: 1fr;
+    }
+
+}
 /* ==================== Tablets and Mobile Screens ==================== */
 @media (max-width:768px){
-
 
   .news-main .grid{
     grid-template-columns: 1fr;
@@ -1334,15 +1429,47 @@ textarea {
   }
 
   .footer_item li a{
-    font-size: 1.15rem
+    font-size: 1rem
   }
   .footer_item h3{
+    margin-top: 20px;
     font-size: 1.25rem;
   }
   .footer li a{
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
+
+  @media (max-width: 375px) {
+    .footer_item li a{
+      font-size: .85rem
+    }
+    .footer_item h3{
+      font-size: 1rem;
+    }
+    .footer li a{
+      font-size: .85rem
+    }
+  
+  }
+  
+  @media (max-width: 768px) {
+    .footer_item li {
+      font-size: 1rem;
+      font-weight:300;
+    }
+    .footer_item li a{
+      font-size: 1rem
+    }
+    .footer_item h3{
+      font-size: 1rem;
+    }
+    .footer li a{
+      font-size: 1rem
+    }
+  
+  }
+  
 
   .footer__sub-footer{
     font-size: 1.15rem;
@@ -1441,8 +1568,7 @@ textarea {
   }
 
   .company-logo{
-    transform: scale(.7);
-    margin-top: -51px;
+    width: 150px;
   }
 
   .footer_item li a {
@@ -1450,8 +1576,48 @@ textarea {
     font-weight: 300;
 
   }
+  
+
   .address p{
-    font-size: 1.15rem;
+    font-size: 1rem;
+    font-weight: 300;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
+}
+
+@media (max-width: 375px) {
+
+  .footer__sub-footer{
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .address p{
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+
+  .footer_item{
+    margin: 0;
+  }
+
+  .company-logo{
+    width: 150px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .footer_item{
+    margin: 0;
+  }
+  .company-logo{
+    width: 150px;
+    margin-left:auto;
+    margin-right:auto;
+  }
 }

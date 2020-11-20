@@ -39,7 +39,7 @@ def contacts(request):
             mail = EmailMessage(
                 'Message from ' + name, 
                 messages, 
-                'connectandcare.digital@gmail.com', 
+                'odedahay@gmail.com', 
                 ['odedahay@yahoo.com'], # recipient email change to --> media@cnc-international.com
                 reply_to=[email]
             )

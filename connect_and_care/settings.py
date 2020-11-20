@@ -167,10 +167,16 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-# Email using Segrid:
+#Email using Segrid:
 # EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-# SENDGRID_API_KEY = get_secret('SENDGRID_SECRET_KEY')
-# SENDGRID_SANDBOX_MODE_IN_DEBUG=False
+# SENDGRID_API_KEY = ""
+# SENDGRID_SANDBOX_MODE_IN_DEBUG=True
+
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
 
 try:
     from .local_settings import *
