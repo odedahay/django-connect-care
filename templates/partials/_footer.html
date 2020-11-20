@@ -1,0 +1,51 @@
+{% load static %}
+<!-- footer-->
+<div class="footer bg-primary red-border">
+    <div class="wrapper ">
+        <div class="grid grid-6 mt-2">
+            <div class="footer_item">
+                <img src="{% static 'images/c&c_main-logo.svg' %}" class="company-logo" alt="Connect and Care Germany">
+            </div>
+            <div class="footer_item one">
+                <h3>C&C Service</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'programs' %}">Programs</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                </ul>
+            </div>
+            <div class="footer_item two">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="{% url 'faq' %}">FAQ</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+
+                </ul>
+            </div>
+            <div class="footer_item company">
+                <h3>Affiliated</h3>
+                <ul>
+                    <li><a href="http://agilecrew.com/" target="_blank">Agile Maritime Resources Inc.</a></li>
+                    <li><a href="http://www.crewclaims-lubpi.com/" target="_blank">Lubeca Protection & Indemnity Phils., Inc.</a></li>
+                    <li>Connect & Care Deutschland GmbH</li>
+                </ul>
+            </div>
+            <div class="footer_item social">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/cncinternatl" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <!-- <a href="#"><i class="fab fa-instagram fa-2x"></i></a> -->
+
+            </div>
+            <div class="footer_item address">
+                <p>Suite 205 Marbella 1 Bldg.
+                    2223 Roxas Blvd., Pasay City 1300
+                    Philippines</p>
+            </div>
+        </div>
+        <div class="footer__sub-footer text-center">
+            <p class="">Copyright © <span class="year"></span> Connect & Care, International Human Resource Management Services</p>
+        </div>
+    </div>
+
+</div>
+<!-- End footer-->

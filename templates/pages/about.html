@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %} 
+<!-- Hero Banner -->
+<section id="page-banner">
+    <div class="wrapper">
+        <div class="banner-block" style="background: linear-gradient(110deg, rgba(42, 34,169,.5) 50%, rgba(0, 0, 0, .5) 30%), url({% static 'images/inner-about-banner.jpg' %}) no-repeat center center;">
+            <div class="banner-block-text">
+                <h1 class="lg-title white-font uppercase">About Us</h1>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- about main -->
+<section class="about-main my-2">
+    <div class="wrapper grid">
+
+        <div class="generic-content-container my-4">
+            {% if about %}
+                {% for page in about %}
+                <h1 class="lg-title uppercase text-primary text-center pb-3">{{page.sub_title}}</h1>
+                {{page.content | safe}}
+                {% endfor %}
+            {% else %}
+                <p class="lead">No content available</p>
+            {% endif %}
+          
+        </div>
+    </div>
+</section>
+
+
+ <!-- Partners-->
+ <div class="partner-section">
+    <div class="wrapper text-center">
+
+        <h2 class="lead text-primary uppercase">Our Partners</h2>
+        <div class="wrapper flex">
+            <div class="partner-section__item">
+                <img src="{% static 'images/connect-and-care-Germany.svg' %}" alt="Connect and Care Germany">
+            </div>
+            <div class="partner-section__item">
+                <img src="{% static 'images/logo_agile-maritime.svg' %}" alt="AGILE Maritime" >
+            </div>
+            <div class="partner-section__item">
+                <img src="{% static 'images/lubeca.svg' %}" alt="Lubeca">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Partners-->
+{% endblock%}
+

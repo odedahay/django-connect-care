@@ -1,0 +1,18 @@
+{% load static %}
+<h3 class="my-2">Programs level</h3>
+<div class="sticky-card">
+    <nav>
+        
+        <ul>
+            <li><a href="/programs/breakthrough-or-beginner"
+                {% if request.path == '/programs/breakthrough-or-beginner/' %} class="level a-level active" {% else %} class="level a-level"{% endif%} data-level=""><i class="class-level">A1</i> Breakthrough or beginner</a></li>
+            <li><a href="/programs/waystage-or-elementary" 
+                {% if '/programs/waystage-or-elementary/' == request.path %} class="level a-level active" {% else %} class="level a-level"{% endif%} data-level=""><i class="class-level">A2</i> Waystage or elementary</a></li>
+            <li><a href="/programs/threshold-or-intermediate" 
+                {% if '/programs/threshold-or-intermediate/' == request.path %} class="level b-level active" {% else %} class="level b-level"{% endif%} data-level="b1"><i class="class-level">B1</i> Threshold or intermediate</a></li>
+            <li><a href="/programs/vantage-or-upper-intermediate" 
+                {% if '/programs/vantage-or-upper-intermediate/' == request.path %} class="level b-level active" {% else %} class="level b-level"{% endif %} data-level="b2"><i class="class-level">B2</i> Vantage or upper intermediate</a></li>
+        </ul>
+        
+    </nav>
+</div>

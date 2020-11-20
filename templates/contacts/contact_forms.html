@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="contact-main my-5">
+    <div class="wrapper">
+        <div class="contact-main__header">
+            <h1 class="lg-title uppercase text-primary text-center">Contact Us</h1>
+            <h2 class="text-center">Need help, or have a question?</h2>
+
+        </div>
+        <div class="contact-main__wrapper grid">
+
+            <div class="contact-main__address">
+                <h3>Mobile Number: </h3>
+
+                <p>(+63) 9164047893 (Globe)<br>
+                    (+63) 9298663204 (Smart)</p>
+
+                <h3>Landline: </h3>
+                    <p>(+632) 7934 4005</p>
+                <h3>Email Address:</h3>
+                    <p>media@cnc-international.com</p>
+            </div>
+            <div class="contact-main__form" id="email">
+                <!-- <h2>Request a Demo</h2> -->
+                <form action="{% url 'contacts' %}" name="contacts" method="POST" role="form" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-control">
+                        <label class="label-style">Name:</label>
+                        <input type="text" name="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-control">
+                        <label class="label-style">Mobile Number: </label>
+                        <input type="tel" name="phone" placeholder="+63 9164047893" required>
+                    </div>
+                    <div class="form-control">
+                        <label class="label-style">Email Address:</label>
+                        <input type="email" name="email" placeholder="email@website.com" required>
+                    </div>
+
+                    <div class="form-control">
+                        <label class="label-style">Upload Your CV:</label>
+                            <input type="file" name="cv_document">
+                        </label>
+                    </div>
+                
+                    <div class="form-control">
+                        <textarea placeholder="How can we help?" name="messages"></textarea>
+                    </div>
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                    <!-- <button type="submit" class="btn btn-primary" name="submit" value="send">Submit</button> -->
+                </form>
+             
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

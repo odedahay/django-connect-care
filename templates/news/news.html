@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content%}
+  
+    <!-- Head -->
+
+    <section id="page-banner">
+        <div class="wrapper">
+            <div class="banner-block" style="background: linear-gradient(110deg, rgba(42, 34,169,.5) 50%, rgba(0, 0, 0, .5) 30%), url({% static 'images/inner-news-banner.jpg' %}) no-repeat center center;">
+                <div class="banner-block-text">
+                    <h1 class="lg-title white-font uppercase" style="visibility: hidden;">News</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News main -->
+    <div class="news-main my-4">
+        <div class="wrapper-md">
+
+            <div class="generic-content-container p-2">
+
+                {% if news_list %}
+                    {% for news in news_list %}
+                        <section class="py-1">
+                            <a href="{% url 'news_detail' news.slug  %}"><h2 class="md-title text-primary">{{news.title}}</h2></a>
+                            <p class="news-date">{{news.pub_date | date:"M d, Y" }}</p>
+                            
+                            {{news.content | safe | truncatechars:170 }}
+
+                            <p class="py-1"><a href="{% url 'news_detail' news.slug  %}" class="btn-sm-gallery">Read More <i class="fas fa-angle-right"></i></a></p>
+                        </section>
+                    {% endfor %}
+                   
+                {% else %}
+                    <p class="lead">No news available</p>
+                {% endif %}
+               
+               
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

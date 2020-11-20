@@ -1,0 +1,24 @@
+{% load static %}
+<!-- header -->
+<header class="site-header">
+    <div class="wrapper">
+        <div class="site-header__main-nav flex">
+            <div class="site-header__logo">
+                <a href="{% url 'index' %}"><img src="{% static 'images/main-logo.svg' %}" alt="Connect & Care" /></a>
+            </div>
+            <div class="site-header__menu-content" id="menu-content">
+                <i class="fas fa-times fa-3x closeMenu"></i>
+                <nav class="primary-nav">
+                    <ul>
+                        <li><a href="{% url 'about' %}" {% if 'about' in request.path %} class="active" {% endif %}>About</a></li>
+                        <li><a href="{% url 'programs' %}" {% if 'programs' in request.path %} class="active"{% endif %} >Programs</a></li>
+                        <li><a href="{% url 'testimonials' %}" {% if 'testimonials' in request.path %} class="active"{% endif %} >Testimonials</a></li>
+                        <li><a href="{% url 'news' %}" {% if 'news' in request.path %} class="active"{% endif %}>News</a></li>
+                        <li><a href="{% url 'contacts' %}" id="contact-link" {% if 'contacts' in request.path %} class="contact-btn active" {% else %} class="contact-btn" {% endif %} >Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <i class="fas fa-bars fa-2x showMenu"></i>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,192 @@
+
+{% extends 'base.html'%}
+{% load static %}
+{% load humanize %}
+
+{% block content %} 
+
+<!-- Image Slider -->
+<section id="slider-container">
+    <!-- slides -->
+    <div class="slide fade" id="slide-0">
+        <img src="{% static 'images/banner/img-1.jpg' %}" alt="this is banner" />
+    </div>
+    <div class="slide fade" id="slide-1">
+        <img src="{% static 'images/banner/img-2.jpg' %}" alt="Second Image">
+    </div>
+    <div class="slide fade" id="slide-2">
+        <img src="{% static 'images/banner/img-3.jpg' %}" alt="Third  Image">
+    </div>
+
+    <!-- arrow navigation -->
+    <div id="arrow-wrapper">
+        <p class="slider-arrow center_y" id="arrow-prev"><i class="fas fa-angle-left"></i></p>
+        <p class="slider-arrow center_y" id="arrow-next"><i class="fas fa-angle-right"></i></p>
+    </div>
+
+    <div class="banner-wrapper center_y_text center_x_text">
+        <div class="wrapper">
+            <div class="banner-text__item">
+                <h2>Work And Live in Germany</h2>
+                <h3>We offer German Language courses for beginners <br>up to professional level
+                </h3>
+                <p><a href="programs.html" class="btn sm btn-secondary">Learn More!</a></p>
+            </div>
+            <div class="banner-text__item">
+                <h2 class="blue-font">Learn German Language Online</h2>
+                <h3 class="blue-font">Learn German Language at the convenience of your home
+                </h3>
+                <p><a href="faq.html" class="btn sm btn-secondary">Learn More!</a></p>
+            </div>
+            <div class="banner-text__item">
+                <h2 class="blue-font"> <span style="text-transform: capitalize;">“Pflege”</span> Professional<span class="break"></span> Level for Nurses</h2>
+                <h3 class="blue-font">Our curriculum are specifically designed for <span class="break"></span>nursing professionals
+                </h3>
+                <p><a href="about.html" class="btn sm btn-secondary">Learn More!</a></p>
+            </div>
+        </div>
+    </div>
+      <!-- dot navigation -->
+    <div id="dots-wrapper" class="center_x">
+        <div class="dot-navigation"></div>
+        <div class="dot-navigation"></div>
+        <div class="dot-navigation"></div>
+    </div>
+</section>
+
+<div class="program-offered">
+
+    <div class="wrapper">
+       <div class="py-4">
+           <h1 class="lg-title text-primary uppercase">Program We Offered</h1>
+            <h2 class="md-subtile text-secondary uppercase"><span class="border-line"></span>Level</h2>
+        </div>
+        <div class="grid grid-4 grid-4-card text-center">
+            <a href="programs/breakthrough-or-beginner#a1" class="card py-3">
+                <div class="program-offered__program-item ">
+                    <h2 class="program-offered__title">A1</h2>
+                    <p class="program-offered__sub-title program-offered_min-height">Breakthrough or beginner <span class="program-offered__sub-title-small">(120 hours)</span></p>
+                    <p class="program-offered__descriptions">Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.</p>
+                </div>
+            </a>
+            <a href="/programs/waystage-or-elementary#a2" class="card py-3">
+                <div class="program-offered__program-item">
+                    <h2 class="program-offered__title">A2</h2>
+                    <p class="program-offered__sub-title program-offered_min-height">Waystage or elementary<span class="program-offered__sub-title-small">(120 hours)</p>
+                    <p class="program-offered__descriptions">Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.</p>
+                </div>
+            </a>
+            <a href="/programs/threshold-or-intermediate#b1" class="card py-3">
+                <div class="program-offered__program-item">
+                    <h2 class="program-offered__title program-offered__title-secondary">B1</h2>
+                    <p class="program-offered__sub-title-blue program-offered_min-height">Threshold or intermediat <span class="program-offered__sub-title-small">(120 hours)</p>
+                    <p class="program-offered__descriptions">Can understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc.</p>
+                </div>
+            </a>
+            <a href="/programs/vantage-or-upper-intermediate#b2" class="card py-3">
+                <div class="program-offered__program-item">
+                    <h2 class="program-offered__title program-offered__title-secondary">B2</h2>
+                    <p class="program-offered__sub-title-blue program-offered_min-height">Vantage or upper intermediate <span class="program-offered__sub-title-small">(120 hours)</p>
+                    <p class="program-offered__descriptions">Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialization.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="home-faq my-4">
+    <div class="wrapper">
+        <div class="grid grid-2">
+            <div class="home-faq__red-card home-faq__card" style="background: linear-gradient(rgba(222,20,50,.80),rgba(222,20,50,.80)),url({% static 'images/left-image.jpg' %});">
+                <h2 class="home-faq__title">How can C&C help you?</h2>
+                <h3 class="home-faq__subtitle">C&C international will help you to be job ready in Germany. Check out our frequently asked questions to know more.</h3>
+                <p class="py-1"><a href="{% url 'faq' %}" class="home-faq-btn">Learn more &#10095</a></p>
+            </div>
+            <div class="home-faq__blue-card home-faq__card" style="background: linear-gradient(rgba(42,34,169,.80),rgba(42,34,169,.80)),url({% static 'images/right-image.jpg' %});">
+                <h2 class="home-faq__title">Why choose C&C International?</h2>
+                <h3 class="home-faq__subtitle">Check out our testimonials from our students on why you should choose C&C International as yourGerman Language provider.</h3>
+                <p class="py-1"><a href="{% url 'testimonials' %}" class="home-faq-btn-red">Check out &#10095</a></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Testimonials-->
+<div class="bg-gray my-3" id="testimonials">
+    <div class="wrapper text-center py-4">
+        <p class="lead">Testimonials</p>
+        <h2 class="md text-primary">What Our Students Say</h2>
+
+        <div class="testimonial-heading">
+            <div class="owl-carousel owl-theme testimonials-slider">
+
+                {% if latest_testimonials %}
+                    {% for testimonials in latest_testimonials %}
+                        <div class="mx-3 mx-lg-5 my-5 pt-3">
+                            <div class="card card-shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
+                                <div class="card-body index-forward pt-5 rounded-lg">
+                                <div class="testimonial-img">
+                                    <img class="rounded-circle" src="{{ testimonials.photo.url }}" alt="{{testimonials.name}}"/>
+                                </div>
+                                <p class="testimonial-message">
+                                    {{testimonials.content}}
+                                </p>
+                                <h5 class="testimonial-name"> -  {{testimonials.name}},</h5>
+                                <p class="testimonial-address"> {{testimonials.designation}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                <p>No available content</p>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Testimonials-->
+
+<!-- News-->
+<div class="news-section py-5">
+    <div class="wrapper ">
+        <h2 class="news lg text-primary uppercase">News</h2>
+        <div class="grid">
+            {% if latest_news %}
+                {% for news in latest_news %}
+                    <div class="news-section__item">
+                        <h3 class="lead my-3">{{ news.title }}</h3>
+                        <p class="sm">{{ news.content | safe | truncatechars:170 }}</p>
+                        <p class="py-2"><a href="{% url 'news_detail' news.slug  %}" class="btn-sm-gallery my-4">Read More <i class="fas fa-angle-right"></i></a></p>
+                    </div>
+                {% endfor %}
+            {% endif%}
+           
+        </div>
+    </div>
+</div>
+<!-- End News-->
+
+<!-- Partners-->
+<div class="partner-section">
+    <div class="wrapper text-center">
+        <h2 class="lead text-primary uppercase">Our Partners</h2>
+        <div class="wrapper flex">
+            <div class="partner-section__item">
+                <img src="{% static 'images/connect-and-care-Germany.svg' %}" alt="Connect and Care Germany">
+            </div>
+            <div class="partner-section__item">
+                <img src="{% static 'images/logo_agile-maritime.svg' %}" alt="AGILE Maritime" >
+            </div>
+            <div class="partner-section__item">
+                <img src="{% static 'images/lubeca.svg' %}" alt="Lubeca">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End footer-->
+
+{% endblock%}
+
+

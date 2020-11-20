@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+    <title>Connect & Care | Home</title>
+    <meta name="keywords" content="Travel planning, travel bundles, travel escapes, affordable travel">
+    <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <!-- Owl Carousel-->
+    <link rel="stylesheet" href="{% static 'vendor/owl.carousel2/assets/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/owl.carousel2/assets/owl.theme.default.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/utilities.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!--Navbar -->
+    {% include 'partials/_navbar.html' %}
+
+    {% block content %} 
+    {% endblock %}
+    
+    <!--Footer -->
+    {% include 'partials/_footer.html' %}
+
+    <!-- scripts-->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/owl.carousel2/owl.carousel.min.js' %}"></script>
+
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/banner.js' %}"></script>
+    <script>
+        $('.testimonials-slider').owlCarousel({
+            items: 1,
+            dots: true,
+            nav:true,
+            loop: true,
+            margin:10,
+            autoplay:true,
+            autoplayTimeout:6000,
+            autoplayHoverPause:true
+           
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+<section id="page-banner">
+
+    <div class="wrapper">
+        <div class="banner-block" style="background: linear-gradient(110deg, rgba(42, 34,169,.5) 50%, rgba(0, 0, 0, .5) 30%), url({% static 'images/inner-testimonials-banner.jpg' %}) no-repeat center center;">
+            <div class="banner-block-text">
+                <h1 class="lg-title white-font uppercase">Testimonials</h1>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- News main -->
+<div class="testimonials-main my-4">
+    <div class="wrapper grid grid-3">
+
+        <!-- <div class="generic-content-container p-2">
+        </div> -->
+        {% if testimonial %}
+            {% for testi in testimonial %}
+            <div class="card-testimonials">
+                <div class="testimonials-body">
+    
+                        <p class="testimonials-quote">
+                            {{testi.content}}
+                        </p>
+    
+                </div>
+                <div class="testimonials-footer my-3">
+                    <div class="testimonials-main__testimonial-img">
+                        <img src="{{ testi.photo.url }}" class="rounded-circle" alt="name of testimony">
+                    </div>
+                    <div class="testimonials-main__person-name">
+                       <div>
+                        <p class="name">— {{testi.name}},</p>
+                        <p class="address">{{testi.designation}}</p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p class="lead">No available testimonial</p>
+        {% endif %}
+        
+       
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+  <!-- Hero Banner -->
+  <section id="page-banner">
+    <div class="wrapper">
+        <div class="banner-block banner-block__bg" style="background: linear-gradient(110deg, rgba(42, 34,169,1) 50%, rgba(37, 30, 154, 1) 30%), url(images/inner-about-banner.png) no-repeat center center;">
+            <!-- class="banner-block" style="background: linear-gradient(110deg, rgba(42, 34,169,1) 50%, rgba(0, 0, 0, 1) 30%), url(images/inner-about-banner.png) no-repeat center center;">-->
+            <div class="banner-block-text">
+                <h1 class="lg-title white-font uppercase">Frequently Asked Questions</h1>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- FAQ main -->
+<section class="about-main my-2">
+    <div class="wrapper grid">
+
+        <div class="generic-content-container my-4">
+
+            {% if faq%}
+                {% for page in faq %}
+
+                    {{page.content | safe}}
+
+                {% endfor %}
+
+            {% else %}
+                <p class="lead">No content available</p>
+            {% endif %}
+
+        </div>
+    </div>
+</section>
+
+<!-- End FAQ main -->
+{% endblock%}

@@ -1,0 +1,45 @@
+/* --primary-color: #2A22A9;
+--secondary-color: #DE1432;
+--dark-color: #002240;
+--light-color: #EBEBEB;
+--success-color: #5cb85c;
+--error-color: #d9534f; */
+
+#header{
+ background: #2A22A9;
+}
+
+#head img{
+    margin-right: 15px;
+}
+.logo-header{
+    width: 120px; 
+    padding:10px; 
+    background-color:#fff; 
+    border-radius:5px;    
+}
+
+#branding h1{
+    color: #fff;
+}
+
+div.breadcrumbs{
+    background-color:#DE1432; 
+    color: #ffc;
+}
+
+a:link,a:visited{
+    color: #333;
+}
+
+.module h2, .module caption, .inline-group h2{
+    background: #2A22A9;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button{
+    background: #2A22A9;
+}
+
+.button.default, input[type=submit].default, .submit-row input.default{
+    background: #DE1432;
+}
