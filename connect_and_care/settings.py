@@ -169,14 +169,24 @@ MEDIA_URL = '/media/'
 
 #Email using Segrid:
 # EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-# SENDGRID_API_KEY = ""
+# SENDGRID_API_KEY = ''
 # SENDGRID_SANDBOX_MODE_IN_DEBUG=True
 
-# EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
+# MailGun
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = True
+
+# GMAIL
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = ''
 # EMAIL_HOST_PASSWORD = ''
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 
 try:
     from .local_settings import *

@@ -38,8 +38,8 @@ def contacts(request):
             #settings.EMAIL_HOST_USER,
             mail = EmailMessage(
                 'Message from ' + name, 
-                messages, 
-                'odedahay@gmail.com', 
+                'Contact Number: ' +  phone + '\n\n' + messages + '\n\n' + 'Sign into the admin panel for more info', 
+                'inquiry@connectandcareph.com', 
                 ['odedahay@yahoo.com'], # recipient email change to --> media@cnc-international.com
                 reply_to=[email]
             )
