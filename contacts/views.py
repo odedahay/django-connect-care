@@ -40,7 +40,7 @@ def contacts(request):
                 'Message from ' + name, 
                 'Contact Number: ' +  phone + '\n\n' + messages + '\n\n' + 'Sign into the admin panel for more info', 
                 'inquiry@connectandcareph.com', 
-                ['odedahay@yahoo.com'], # recipient email change to --> media@cnc-international.com
+                ['media@cnc-international.com'], # recipient email change to --> media@cnc-international.com
                 reply_to=[email]
             )
 
