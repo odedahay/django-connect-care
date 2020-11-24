@@ -69,7 +69,7 @@ pre {
 @media (max-width: 375px) {
   .site-header__logo img{
     margin-top: 20px;
-    width: 220px
+    width: 180px
   }
   
 }
@@ -77,7 +77,7 @@ pre {
 @media (max-width: 768px) {
   .site-header__logo img{
     margin-top: 20px;
-    width: 220px
+    width: 200px
   }
 }
 
@@ -92,6 +92,7 @@ pre {
 
 .site-header .flex {
   justify-content: space-between;
+  padding-top: 15px;
 }
 
 /* ==================== Navbar ==================== */
@@ -425,7 +426,7 @@ pre {
   background-color: #f5f5f5;
   transition: transform 0.2s ease-in;
   min-height: 460px;
-  background: url(/static/pattern-2.png) no-repeat;
+  background: url(/static/images/pattern-2.png) no-repeat;
   background-size: contain;
   background-position: center center;
   top: 0;
@@ -519,7 +520,7 @@ a.home-faq-btn-red:hover{
 
 .card.with-pattern::before {
   content: '';
-  background: url(/static/pattern-2.png) no-repeat;
+  background: url(/static/images/pattern-2.png) no-repeat;
   background-size: cover;
   background-position: center center;
   position: absolute;
@@ -1343,6 +1344,7 @@ textarea {
     color: var(--secondary-color);
     margin: 10px 25px;
     cursor: pointer;
+    padding-top: 20px;
   }
 
   .site-header__menu-content {
@@ -1499,12 +1501,12 @@ textarea {
   }
   .banner-text__item h2{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     line-height: 3.5rem;
     margin-top: 3.5rem;
   }
   .banner-text__item h3{
-    font-size: 1.7rem;
+    font-size: 1.45rem;
     margin-top: 3rem;
   }
   .lg:after{
