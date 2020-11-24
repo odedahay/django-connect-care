@@ -92,7 +92,15 @@ pre {
 
 .site-header .flex {
   justify-content: space-between;
-  padding-top: 15px;
+}
+
+
+@media (min-width: 768px) {
+  
+  .site-header .flex {
+    justify-content: space-between;
+    padding-top: 15px;
+  }
 }
 
 /* ==================== Navbar ==================== */
