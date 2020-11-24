@@ -63,7 +63,7 @@ pre {
 
 /* Header */
 .site-header__logo img{
-  width: 320px
+  width: 200px
 }
 
 @media (max-width: 375px) {
