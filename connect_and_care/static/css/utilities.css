@@ -224,17 +224,19 @@ margin: 0 0 1.8rem;
 }
 
 @media (max-width: 375px) {
-.generic-content-container p {
-  width: 75%;
-  margin: 0 auto;
-}
+  .generic-content-container p {
+    width: 75%;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
 }
 
 @media (max-width: 768px) {
-.generic-content-container p {
-  width: 100%;
-  margin: 0 auto;
-}
+  .generic-content-container p {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 2;
+  }
 }
 
 
