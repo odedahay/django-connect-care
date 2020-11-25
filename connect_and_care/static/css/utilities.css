@@ -220,7 +220,12 @@ margin: 0 0 1.8rem;
 .generic-content-container p {
   font-weight: 300;
   line-height: 1.65;
-  margin: 0 0 1.8rem;
+  margin: 0 0 1.8rem 0;
+}
+@media (min-width: 530px) {
+  .generic-content-container p {
+    font-size: 1.125rem;
+  }
 }
 
 @media (max-width: 375px) {
@@ -281,13 +286,14 @@ a.link:hover{
   font-size: 2.2rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  text-align: center;
+  
 }
 @media (max-width: 375px) {
 .lg-title{
   font-size: 2rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  text-align: center;
 }
 }
 
