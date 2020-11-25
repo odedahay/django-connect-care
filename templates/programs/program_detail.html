@@ -41,3 +41,23 @@
 
 
 {% endblock%}
+
+
+{% block extra_js %}
+    <script>
+        // sticky side bar
+        const sideNav = document.querySelector(".sticky-card")
+        
+        window.addEventListener('scroll', stickySideBar);
+
+        function stickySideBar(){
+            if(window.scrollY > 556){
+                sideNav.classList.add('sticky-card-fixed');
+            }else{
+                sideNav.classList.remove('sticky-card-fixed');
+            }
+         }
+         
+    </script>
+{% endblock %}
+

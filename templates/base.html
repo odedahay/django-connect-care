@@ -29,13 +29,13 @@
     
     <!--Footer -->
     {% include 'partials/_footer.html' %}
-
+    {% block extra_js %}{% endblock extra_js %}
     <!-- scripts-->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/owl.carousel2/owl.carousel.min.js' %}"></script>
 
     <script src="{% static 'js/app.js' %}"></script>
-    <script src="{% static 'js/banner.js' %}"></script>
+   
     <script>
         $('.testimonials-slider').owlCarousel({
             items: 1,
