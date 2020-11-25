@@ -85,7 +85,7 @@ pre {
 @media (max-width: 1024px) {
   .site-header__logo img{
     margin-top: 20px;
-    width: 210px
+    width: 165px
   }
 }
 
@@ -1345,7 +1345,7 @@ textarea {
     color: var(--secondary-color);
     margin: 10px 25px;
     cursor: pointer;
-    padding-top: 20px;
+    padding-top: 5px;
   }
 
   .site-header__menu-content {

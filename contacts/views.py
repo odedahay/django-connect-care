@@ -38,7 +38,7 @@ def contacts(request):
             #settings.EMAIL_HOST_USER,
             mail = EmailMessage(
                 'Message from ' + name, 
-                'Contact Number: ' +  phone + '\n\n' + messages + '\n\n' + 'Sign into the admin panel for more info', 
+                'Contact Number: ' +  phone + '\n\n' + messages + '\n', 
                 'inquiry@connectandcareph.com', 
                 ['media@cnc-international.com'], # recipient email change to --> media@cnc-international.com
                 reply_to=[email]
