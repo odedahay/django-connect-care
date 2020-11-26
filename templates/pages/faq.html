@@ -5,7 +5,7 @@
   <!-- Hero Banner -->
   <section id="page-banner">
     <div class="wrapper">
-        <div class="banner-block banner-block__bg" style="background: linear-gradient(110deg, rgba(42, 34,169,1) 50%, rgba(37, 30, 154, 1) 30%), url(images/inner-about-banner.png) no-repeat center center;">
+        <div class="banner-block banner-block__bg" style="background: linear-gradient(110deg, rgba(42, 34,169,1) 50%, rgba(37, 30, 154, 1) 30%)">
             <!-- class="banner-block" style="background: linear-gradient(110deg, rgba(42, 34,169,1) 50%, rgba(0, 0, 0, 1) 30%), url(images/inner-about-banner.png) no-repeat center center;">-->
             <div class="banner-block-text">
                 <h1 class="lg-title white-font uppercase">Frequently Asked Questions</h1>
@@ -40,27 +40,3 @@
 
 <!-- End FAQ main -->
 {% endblock%}
-
-{% block extra_js %}
-    <script>
-        
-        // FAQ Section
-        var accordion = document.querySelectorAll('.accordion-button');
-                
-        for ( var i = 0; i < accordion.length; i++){
-            accordion[i].addEventListener('click', function(){
-
-                this.classList.toggle("active-display");
-
-                var panel = this.nextElementSibling;
-                
-                if(panel.style.maxHeight){
-
-                    panel.style.maxHeight = null;
-                }else{
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-        }
-    </script>
-{% endblock %}
