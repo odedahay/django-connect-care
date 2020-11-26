@@ -36,8 +36,8 @@
                     </div>
                     <div class="testimonials-main__person-name">
                        <div>
-                        <p class="name">— {{testi.name}},</p>
-                        <p class="address">{{testi.designation}}</p>
+                        <p class="name">— {{testi.name}}{% if testi.designation %},{% endif%}</p>
+                        <p class="address">{% if testi.designation %}{{testi.designation}}{% endif%}</p>
                        </div>
                     </div>
                 </div>

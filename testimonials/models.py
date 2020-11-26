@@ -4,7 +4,7 @@ from ckeditor.fields import RichTextField
 class Testimonial(models.Model):
     order_by = models.IntegerField(unique=True, blank=True, null=True)
     name = models.CharField(max_length=200, unique=True)
-    designation = models.CharField(max_length=200)
+    designation = models.CharField(max_length=200, blank=True, null=True)
     #content = RichTextField(blank=True)
     content = models.TextField(blank=True)
     photo = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
