@@ -11,7 +11,7 @@ def contacts(request):
         email = request.POST['email']
         phone = request.POST['phone']
         
-        # If no attachedment, MultiValueDictKeyError error, how do I deal with it
+        # If no attachment, MultiValueDictKeyError error, how do I deal with it
         if 'cv_document' in request.FILES:
             cv_file = request.FILES['cv_document']
         else:
@@ -23,15 +23,12 @@ def contacts(request):
         contact = Contact(name=name, email=email, phone=phone, cv_file=cv_file, message=messages)
         contact.save()
 
-        # attached file
-        #email.content_subtype = 'html'
-
         # send_mail will not work if email has attached file
         # send_mail(
         #     'Message from ' + name,
         #     message,
-        #     'odedahay@gmail.com',
-        #     ['odedahay@yahoo.com'],
+        #     'from@email.com',
+        #     ['receiver@email.com'],
         #     fail_silently=False,
         # )
         try:
@@ -40,9 +37,10 @@ def contacts(request):
                 'Message from ' + name, 
                 'Contact Number: ' +  phone + '\n\n' + messages + '\n', 
                 'inquiry@connectandcareph.com', 
-                ['media@cnc-international.com'], # recipient email change to --> media@cnc-international.com
+                ['odedahay@yahoo.com'], # recipient email change to --> media@cnc-international.com
                 reply_to=[email]
             )
+            mail.content_subtype = 'html'
 
             if 'cv_document' in request.FILES:
                 mail.attach(cv_file.name, cv_file.read(), cv_file.content_type)
