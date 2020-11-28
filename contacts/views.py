@@ -35,12 +35,12 @@ def contacts(request):
                 'Message from ' + name, 
                 'Contact Number: ' +  phone + '\n\n' + messages + '\n', 
                 'inquiry@connectandcareph.com',
-                ['odedahay@yahoo.com'], # media@cnc-international.com
+                ['media@cnc-international.com'], # media@cnc-international.com
                 reply_to=[email]              
             )
             #filename = os.path.join(settings.MEDIA_ROOT + '/', contact.cv_file.name)
             mail.content_subtype = 'html'
-            
+
             if 'cv_document' in request.FILES:
                 mail.attach(cv_file.name, contact.cv_file.read(), cv_file.content_type)
             
