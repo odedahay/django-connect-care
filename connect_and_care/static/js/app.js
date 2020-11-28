@@ -9,10 +9,8 @@ const contact = document.getElementById("contact-link");
 // Programs clicks//
 let navigationLink = document.querySelectorAll(".level");
 
-
 menuBtn.addEventListener('click', showMenu);
 closeBtn.addEventListener('click', closeMenu)
-
 
 
 function showMenu(){
