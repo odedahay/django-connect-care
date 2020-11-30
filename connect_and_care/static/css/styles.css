@@ -1118,7 +1118,7 @@ a.home-faq-btn-red:hover{
   }
   @media screen and (min-width: 360px) {
     .accordion-container{
-      width: 90%;
+      width: 80%;
     }
   }
 
