@@ -870,11 +870,15 @@ a.home-faq-btn-red:hover{
   text-shadow: 1px 1px 1px #333;
 }
 
+
+
 .banner-block-text{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding: 0 20px;
+  text-align: center;
 }
 .sticky-sidebar{
 /* position: relative; */}
@@ -1108,7 +1112,21 @@ a.home-faq-btn-red:hover{
   }
   
   .accordion-container{
+      width: 90%;
+      margin: 0 auto;
       padding:20px 28px 20px 18px;
+  }
+  @media screen and (min-width: 360px) {
+    .accordion-container{
+      width: 90%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .accordion-container{
+      width: 100%;
+      padding:20px 28px 20px 18px;
+    }
   }
 
 
@@ -1135,6 +1153,16 @@ a.home-faq-btn-red:hover{
   }
   .accordion-container a:hover{
     text-decoration: underline;
+  }
+
+  .display-mobile{
+    display: none;
+    font-size: .75rem;
+  }
+  @media (max-width: 768px) {
+    .display-mobile{
+      display: block;
+    }
   }
 
 /* ==================== Contact Styles ==================== */
