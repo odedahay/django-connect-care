@@ -2,6 +2,13 @@
 {% load static %}
 {% load humanize %}
 
+{% block title%}
+    {% for news in news_list %}
+        {{news.title}}
+    {% endfor %}
+{% endblock%}
+
+
 {% block content%}
 
 <div class="programs-main my-4">
