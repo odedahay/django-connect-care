@@ -6,7 +6,7 @@
     {% for news in news_list %}
         {{news.title}}
     {% endfor %}
-{% endblock%}
+{% endblock %}
 
 
 {% block content%}
@@ -15,23 +15,20 @@
     <div class="wrapper grid">
         <div class="sidemenu-sidebar p-2">
             <h3 class="my-2">Recent News</h3>
-            
-                <nav>
-                    
-                    <ul>
-                        {% for news in news_list %}
-                            <li><a href="{% url 'news_detail' news.slug  %}" class="level a-level">{{news.title}}</a></li>
-                        {% endfor %}
-                    </ul>
-                    
-                    
-                </nav>
-           
-
+            <nav>
+                <ul>
+                    {% for news in news_list %}
+                        <li>
+                            <a href="{% url 'news_detail' news.slug  %}" class="level a-level">{{news.title}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
         </div>
+
         <div class="generic-content-container p-2">
 
-            <section class="py-2">
+            <section class="">
                 {% if news_detail %}
 
                     <h2 class="lg-title text-primary">{{news_detail.title}}</h2>

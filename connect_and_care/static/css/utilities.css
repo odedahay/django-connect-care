@@ -294,7 +294,7 @@ a.link:hover{
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -303,6 +303,8 @@ a.link:hover{
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    text-align: left;
+    margin-bottom: 20px;
   }
 }
 

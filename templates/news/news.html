@@ -26,12 +26,16 @@
                 {% if news_list %}
                     {% for news in news_list %}
                         <section class="py-1">
-                            <a href="{% url 'news_detail' news.slug  %}"><h2 class="md-title text-primary">{{news.title}}</h2></a>
+                            <a href="{% url 'news_detail' news.slug  %}">
+                                <h2 class="md-title text-primary">{{news.title}}</h2>
+                            </a>
                             <p class="news-date">{{news.pub_date | date:"M d, Y" }}</p>
                             
                             {{news.content | safe | truncatechars:170 }}
 
-                            <p class="py-1"><a href="{% url 'news_detail' news.slug  %}" class="btn-sm-gallery">Read More <i class="fas fa-angle-right"></i></a></p>
+                            <p class="py-1">
+                                <a href="{% url 'news_detail' news.slug  %}" class="btn-sm-gallery">Read More <i class="fas fa-angle-right"></i></a>
+                            </p>
                         </section>
                     {% endfor %}
                    

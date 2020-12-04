@@ -67,10 +67,10 @@ pre {
   width: 220px
 }
 
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
   .site-header__logo img{
     margin-top: 20px;
-    width: 160px
+    width: 180px
   }
   
 }
@@ -80,13 +80,13 @@ pre {
     margin-top: 20px;
     width: 180px
   }
-}
+} */
 
 
 @media (max-width: 1024px) {
   .site-header__logo img{
     margin-top: 20px;
-    width: 165px
+    width: 190px
   }
 }
 
@@ -712,10 +712,18 @@ a.home-faq-btn-red:hover{
 }
 
 /* Only stick if you can fit */
+
+@media (max-width:768px){
+  .sidemenu-sidebar{
+    border-bottom: 1px solid #e4e4e4;
+  }  
+}
 .sidemenu-sidebar h3{
   font-size: 1.85rem;
   font-weight: 300;
 }
+
+
 
 .sidemenu-sidebar li{
   line-height: 1.25rem;
