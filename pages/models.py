@@ -12,6 +12,7 @@ class Page(models.Model):
     created_date = models.DateTimeField(auto_now_add=True, blank=True)
 
     class Meta:
+        ordering =('title',)
         verbose_name = 'page'
         verbose_name_plural = 'pages'
 

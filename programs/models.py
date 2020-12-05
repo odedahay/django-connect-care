@@ -9,6 +9,8 @@ class Program(models.Model):
     slug = models.SlugField(max_length=200, unique=True, null=True)
     hour = models.CharField(max_length=100)
     #content = RichTextField()
+    home_description = models.TextField(blank=True, null=True)
+    content_intro = RichTextUploadingField(blank=True, null=True)
     content = RichTextUploadingField(blank=True, null=True)
     photo = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     is_published = models.BooleanField(default=True)

@@ -57,54 +57,84 @@
 <div class="program-offered">
 
     <div class="wrapper">
-       <div class="py-4">
-           <h1 class="lg-title text-primary uppercase">Programs We Offer</h1>
-            <h2 class="md-subtile text-secondary uppercase"><span class="border-line"></span>Level</h2>
-        </div>
-        <div class="grid grid-4 grid-4-card text-center">
-            <a href="programs/breakthrough-or-beginner#a1" class="card py-3">
-                <div class="program-offered__program-item ">
-                    <h2 class="program-offered__title">A1</h2>
-                    <p class="program-offered__sub-title program-offered_min-height">Breakthrough or beginner <span class="program-offered__sub-title-small">(120 hours)</span></p>
-                    <p class="program-offered__descriptions">Can understand, use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.</p>
+
+            {% if programs_home %}
+                {% for programs in programs_home %}
+                    {{ programs.content | safe }}
+                {% endfor %}
+            {% else %}
+                <p>No Content Available</p>
+            {% endif %}
+
+            <!-- Programs 4sets-->
+            {% if programs_level %}
+                <div class="grid grid-4 grid-4-card text-center">
+                    {% for program_item in programs_level %}
+                        
+                            <a href="{% url 'program_detail' program_item.slug %}{% if program_item.level == 'A1' %}#a1{% endif %}{% if program_item.level == 'A2' %}#a2{% endif %}{% if program_item.level == 'B1' %}#b1{% endif %}{% if program_item.level == 'B2' %}#b2{% endif %}" class="card py-3">
+
+                                <div class="program-offered__program-item ">
+                                    {% if 'A' in  program_item.level %}
+                                        <h2 class="program-offered__title">{{program_item.level}}</h2>
+                                        <p class="program-offered__sub-title program-offered_min-height">{{program_item.title}}<span class="program-offered__sub-title-small">{{program_item.hour}}</span></p>
+                                      
+                                    {% else %}
+                                        <h2 class="program-offered__title program-offered__title-secondary">{{program_item.level}}</h2>
+                                        <p class="program-offered__sub-title-blue program-offered_min-height">{{program_item.title}} <span class="program-offered__sub-title-small">{{program_item.hour}}</p>
+                                            
+                                    {% endif %} 
+                                    <p class="program-offered__descriptions">{{program_item.home_description}}</p>
+                                </div>
+                            </a>
+                    
+                    {% endfor %}
                 </div>
-            </a>
-            <a href="/programs/waystage-or-elementary#a2" class="card py-3">
-                <div class="program-offered__program-item">
-                    <h2 class="program-offered__title">A2</h2>
-                    <p class="program-offered__sub-title program-offered_min-height">Waystage or elementary<span class="program-offered__sub-title-small">(120 hours)</p>
-                    <p class="program-offered__descriptions">Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.</p>
-                </div>
-            </a>
-            <a href="/programs/threshold-or-intermediate#b1" class="card py-3">
-                <div class="program-offered__program-item">
-                    <h2 class="program-offered__title program-offered__title-secondary">B1</h2>
-                    <p class="program-offered__sub-title-blue program-offered_min-height">Threshold or intermediate <span class="program-offered__sub-title-small">(120 hours)</p>
-                    <p class="program-offered__descriptions">Can understand the main points of clear standard input on familiar matters regularly encountered at work, school, leisure, etc.</p>
-                </div>
-            </a>
-            <a href="/programs/vantage-or-upper-intermediate#b2" class="card py-3">
-                <div class="program-offered__program-item">
-                    <h2 class="program-offered__title program-offered__title-secondary">B2</h2>
-                    <p class="program-offered__sub-title-blue program-offered_min-height">Vantage or upper intermediate <span class="program-offered__sub-title-small">(120 hours)</p>
-                    <p class="program-offered__descriptions">Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialization.</p>
-                </div>
-            </a>
-        </div>
+            {% else %}
+                <p>No Content Available</p>
+            {% endif%}
     </div>
 </div>
+
 <div class="home-faq my-4">
     <div class="wrapper">
         <div class="grid grid-2">
-            <div class="home-faq__red-card home-faq__card" style="background: linear-gradient(rgba(222,20,50,.80),rgba(222,20,50,.80)),url({% static 'images/left-image.jpg' %});">
-                <h2 class="home-faq__title">How can C&C help you?</h2>
-                <h3 class="home-faq__subtitle">C&C international will help you to be job ready in Germany. Check out our frequently asked questions to know more.</h3>
-                <p class="py-1"><a href="{% url 'faq' %}" class="home-faq-btn">Learn more &#10095</a></p>
-            </div>
-            <div class="home-faq__blue-card home-faq__card" style="background: linear-gradient(rgba(42,34,169,.80),rgba(42,34,169,.80)),url({% static 'images/right-image.jpg' %});">
-                <h2 class="home-faq__title">Why choose C&C International?</h2>
-                <h3 class="home-faq__subtitle">Check out our testimonials from our students on why you should choose C&C International as your German Language provider.</h3>
-                <p class="py-1"><a href="{% url 'testimonials' %}" class="home-faq-btn-red">Check out &#10095</a></p>
+            {% if section_a %}
+                {% for content in section_a%}
+                <!--  -->
+                    {% if content.photo %}
+                        <div class="home-faq__red-card home-faq__card" style="background: linear-gradient(rgba(222,20,50,.80),rgba(222,20,50,.80)),
+                    url({{content.photo.url}});"> 
+                    {% else %}
+                        <div class="home-faq__red-card home-faq__card" style="background: linear-gradient(rgba(222,20,50,.80),rgba(222,20,50,.80)),
+                        url({% static 'images/left-image.jpg' %});">
+                    {% endif %}
+                
+                    <h2 class="home-faq__title">{{ content.title }}</h2>
+                    {{ content.content | safe }}
+                </div>
+                {% endfor %}
+            {% else %}
+                <p>No content available</p>
+            {% endif %}
+             <!-- senction border -->
+            {% if section_b %}
+                {% for content in section_b%}
+               
+                    {% if content.photo %}
+                        <div class="home-faq__blue-card home-faq__card" style="background: linear-gradient(rgba(222,20,50,.80),rgba(222,20,50,.80)),
+                        url({{content.photo.url}});"> 
+                    {% else %}
+                        <div class="home-faq__blue-card home-faq__card" style="background: linear-gradient(rgba(42,34,169,.80),rgba(42,34,169,.80)),url({% static 'images/right-image.jpg' %})" >
+                    {% endif %}
+                    <h2 class="home-faq__title">{{ content.title }}</h2>
+                    {{ content.content | safe }}
+
+                </div>
+                {% endfor %}
+            {% else %}
+                <p>No content available</p>
+            {% endif %}
+            
             </div>
         </div>
 

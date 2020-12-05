@@ -10,19 +10,21 @@
             <h1 class="lg-title uppercase text-primary text-center">Contact Us</h1>
             <h2 class="text-center">Need help, or have a question?</h2>
 
+           
+
         </div>
         <div class="contact-main__wrapper grid generic-content-container ">
 
             <div class="contact-main__address">
-                <h3>Mobile Number: </h3>
-
-                <p>(+63) 9164047893 (Globe)<br>
-                    (+63) 9298663204 (Smart)</p>
-
-                <h3>Landline: </h3>
-                    <p>(+632) 7934 4005</p>
-                <h3>Email Address:</h3>
-                    <p>media@cnc-international.com</p>
+               
+                {% if contact_content %}
+                    {%  for content in contact_content %}
+                        {{content.content|safe}}
+                    {% endfor %}
+                {% else%}
+                    <p>No Content Available</p>
+                {% endif%}
+                
             </div>
 
             <div class="contact-main__form" id="email">

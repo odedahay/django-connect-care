@@ -6,7 +6,7 @@ import base64
 
 from django.conf import settings
 import os
-
+from pages.models import Page
 from django.core.mail import EmailMessage
 
 def contacts(request):
@@ -51,7 +51,11 @@ def contacts(request):
 
         return redirect('/contacts/thank-you')
 
-    return render(request, 'contacts/contact_forms.html')
+    contact_content =  Page.objects.filter(slug__exact='contacts-content')
+    context = {
+        'contact_content': contact_content,
+    }
+    return render(request, 'contacts/contact_forms.html', context)
 
 
 def thank_you(request):

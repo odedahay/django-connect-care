@@ -1,18 +1,19 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .models import Program
+from pages.models import Page
 
 def index(request):
-
-    programs = Program.objects.order_by('-order_by').filter(is_published=True)
+    program_intro = Page.objects.filter(slug__exact='programs')
+    programs = Program.objects.order_by('order_by').filter(is_published=True)
 
     paginator = Paginator(programs, 6)
     page = request.GET.get('page')
     paged_listings = paginator.get_page(page)
-
+ 
     context = {
-        'programs':paged_listings,
-        'program_main': 'text'
+        'program_intro':program_intro,
+        'programs':programs
     }
     return render(request, 'programs/programs.html', context)
 

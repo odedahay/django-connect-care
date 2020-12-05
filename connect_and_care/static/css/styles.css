@@ -64,23 +64,8 @@ pre {
 
 /* Header */
 .site-header__logo img{
-  width: 220px
+  width: 280px
 }
-
-/* @media (max-width: 375px) {
-  .site-header__logo img{
-    margin-top: 20px;
-    width: 180px
-  }
-  
-}
-
-@media (max-width: 768px) {
-  .site-header__logo img{
-    margin-top: 20px;
-    width: 180px
-  }
-} */
 
 
 @media (max-width: 1024px) {
@@ -790,7 +775,7 @@ a.home-faq-btn-red:hover{
   margin-right: auto;
 }
 
-.programs-main__list{
+.programs-main__list ul{
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   list-style: none;
@@ -798,7 +783,7 @@ a.home-faq-btn-red:hover{
   margin-bottom: 25px;
 
 }
-.programs-main__list li{
+.programs-main__list ul li{
   margin-left: 1rem;
   margin-bottom: .85rem;
   list-style-image:url(/static/images/icons/check-solid.svg);

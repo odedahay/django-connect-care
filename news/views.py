@@ -12,7 +12,7 @@ def index(request):
 def news_detail(request, c_slug=None):
     
     news_detail = get_object_or_404(News, slug=c_slug)
-    news_list = News.objects.all()[:4]
+    news_list = News.objects.all()[:6]
    
     context = {
         'news_detail':news_detail,

@@ -71,8 +71,8 @@ CKEDITOR_IMAGE_BACKEND = "pillow"
 
 CKEDITOR_CONFIGS = {
       'default': {
-          'allowedContent': True, 
-          'extraAllowedContent': '*(*)',
+          'allowedContent': True,
+          'extraAllowedContent': '*(*)' + 'a[*];',
       }
 }
 
