@@ -280,6 +280,13 @@ a.link:hover{
   font-size: 1rem;
 }
 
+@media (max-width: 540px) {
+  .sm {
+    font-size: .85rem;
+  }
+  
+}
+
 .md {
   font-size: 2rem;
 }

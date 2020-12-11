@@ -426,6 +426,12 @@ pre {
   left: 0;
 }
 
+@media (max-width:550px){
+  .program-offered .card{
+    min-height: 250px;
+  }
+}
+
 .program-offered .card:hover {
   transform: translateY(-15px);
 }
@@ -1319,7 +1325,7 @@ textarea {
   }
 
   .home-faq__card{
-    padding: 3rem 3rem;
+    padding: 2rem;
     /* min-height: 310px; */
   }
   .testimonials-main .grid{
@@ -1404,7 +1410,7 @@ textarea {
   }
 
   .banner-text__item p{
-    margin-top:50px
+    margin-top:20px
   }
 
   .program-offered .grid-4{
@@ -1522,13 +1528,14 @@ textarea {
     }
     .banner-text__item h2{
       text-align: center;
-      font-size: 1.8rem;
-      line-height: 3.5rem;
-      margin-top: 3.5rem;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      margin-top: 16rem;
     }
     .banner-text__item h3{
-      font-size: 1.45rem;
-      margin-top: 3rem;
+      font-size: 1.25rem;
+      line-height: 1.55rem;
+      margin-top: 0rem;
     }
     .lg:after{
       width: 27%;
@@ -1542,13 +1549,13 @@ textarea {
       grid-template-columns: 1fr;
     }
     .home-faq__title{
-      line-height: 2.5rem;
-      font-size: 2rem;
+      line-height: 2rem;
+      font-size: 1.65rem;
       font-weight: 400;
     }
     .home-faq__subtitle{
-      line-height: 2.5rem;
-      font-size: 1.5rem;
+      line-height: 2.0rem;
+      font-size: 1.3rem;
       font-weight: 300;
     }
 

@@ -8,15 +8,18 @@
 <!-- Image Slider -->
 <section id="slider-container">
     <!-- slides -->
-    <div class="slide fade" id="slide-0">
-        <img src="{% static 'images/banner/img-1.jpg' %}" alt="this is banner" />
-    </div>
-    <div class="slide fade" id="slide-1">
-        <img src="{% static 'images/banner/img-2.jpg' %}" alt="Second Image">
-    </div>
-    <div class="slide fade" id="slide-2">
-        <img src="{% static 'images/banner/img-3.jpg' %}" alt="Third  Image">
-    </div>
+    <picture class="slide fade" id="slide-0">
+        <source srcset="{% static 'images/banner/img-1.jpg' 990w %}" media="(min-width: 640px)">
+        <img src="{% static 'images/banner/img-mobile-1.jpg' %}" alt="Work And Live in Germany" />
+    </picture>
+    <picture class="slide fade" id="slide-1">
+        <source srcset="{% static 'images/banner/img-2.jpg' 990w %}" media="(min-width: 640px)">
+        <img src="{% static 'images/banner/img-mobile-2.jpg' %}" alt="Learn German Language Online" />
+    </picture>
+    <picture class="slide fade" id="slide-2">
+        <source srcset="{% static 'images/banner/img-3.jpg' 990w %}" media="(min-width: 640px)">
+        <img src="{% static 'images/banner/img-mobile-3.jpg' %}" alt="“Pflege” Professional Level for Nurses" />
+    </picture>
 
     <!-- arrow navigation -->
     <div id="arrow-wrapper">
@@ -103,10 +106,10 @@
                 <!--  -->
                     {% if content.photo %}
                         <div class="home-faq__red-card home-faq__card" style="background: linear-gradient(rgba(222,20,50,.80),rgba(222,20,50,.80)),
-                    url({{content.photo.url}});"> 
+                    url({{content.photo.url}}) no-repeat center center;"> 
                     {% else %}
                         <div class="home-faq__red-card home-faq__card" style="background: linear-gradient(rgba(222,20,50,.80),rgba(222,20,50,.80)),
-                        url({% static 'images/left-image.jpg' %});">
+                        url({% static 'images/left-image.jpg' %}) no-repeat center center;">
                     {% endif %}
                 
                     <h2 class="home-faq__title">{{ content.title }}</h2>
@@ -122,9 +125,9 @@
                
                     {% if content.photo %}
                         <div class="home-faq__blue-card home-faq__card" style="background: linear-gradient(rgba(222,20,50,.80),rgba(222,20,50,.80)),
-                        url({{content.photo.url}});"> 
+                        url({{content.photo.url}})no-repeat center center;"> 
                     {% else %}
-                        <div class="home-faq__blue-card home-faq__card" style="background: linear-gradient(rgba(42,34,169,.80),rgba(42,34,169,.80)),url({% static 'images/right-image.jpg' %})" >
+                        <div class="home-faq__blue-card home-faq__card" style="background: linear-gradient(rgba(42,34,169,.80),rgba(42,34,169,.80)),url({% static 'images/right-image.jpg' %})no-repeat center center;" >
                     {% endif %}
                     <h2 class="home-faq__title">{{ content.title }}</h2>
                     {{ content.content | safe }}
