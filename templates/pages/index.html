@@ -165,8 +165,8 @@
                                 <p class="testimonial-message">
                                     {{testimonials.content}}
                                 </p>
-                                <h5 class="testimonial-name"> -  {{testimonials.name}},</h5>
-                                <p class="testimonial-address"> {{testimonials.designation}}</p>
+                                <h5 class="testimonial-name"> -  {{testimonials.name}} {%if testimonials.name %},{% endif %}</h5>
+                                <p class="testimonial-address"> {% if testimonials.designation %}{{testimonials.designation}}{% endif%}</p> 
                                 </div>
                             </div>
                         </div>
